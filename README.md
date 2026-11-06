@@ -307,23 +307,17 @@ val resultado = productos
 
 ### 5.1 Tabla comparativa de lenguajes
 
-| Criterio             | Scala | Java | Python |
-| ---                  | --- | --- | --- |
+| Criterio                         |                                  Scala                            | Java | Python |
+| ---                              |                                                               --- |                             --- | --- |
 | **Sintaxis de la lambda**
-
- | `p => p.precio > 10` | `p -> p.precio() > 10` | `lambda p: p.precio > 10` |
+| `p => p.precio > 10`             |                              `p -> p.precio() > 10`               | `lambda p: p.precio > 10` |
 | **Declaración de tipos**
-
- | Inferencia estática automática | Inferencia mediante Interfaces Funcionales | Tipado dinámico implícito |
+| Inferencia estática automática   | Inferencia mediante Interfaces Funcionales                        | Tipado dinámico implícito |
 | **Operaciones con listas**
-
- | Nativas directas en colecciones | Mediante API de Streams | Nativas (`map`, `filter`) o `functools` |
+| Nativas directas en colecciones  | Mediante API de Streams | Nativas (`map`, `filter`) o `functools` |
 | **Restricción del lenguaje**
-
- | Mínimas; diseño funcional nativo | Verbosidad por sintaxis de clases y streams | Limitado a expresiones de una sola línea (`lambda`) |
-| **Legibilidad**
-
- | Muy alta y concisa | Moderada (requiere boilerplate) | Alta, limpia pero limitada |
+| Mínimas; diseño funcional nativo |       Verbosidad por sintaxis de clases y streams                 | Limitado a expresiones de una sola línea (`lambda`) |   
+| **Legibilidad**                  |                        Muy alta y concisa                         | Moderada (requiere boilerplate) | Alta, limpia pero limitada |
 
 * **¿En qué lenguaje fue más natural resolver los problemas?** En **Scala**, debido a que el paradigma funcional está integrado de forma nativa en su sintaxis y colecciones sin necesidad de adaptadores ni conversiones a streams.
 
