@@ -1,0 +1,53 @@
+from functools import reduce
+
+# Definición de la clase Producto usando una clase simple o dataclass
+class Producto:
+    def __init__(self, nombre, categoria, precio, stock):
+        self.nombre = nombre
+        self.categoria = categoria
+        self.precio = precio
+        self.stock = stock
+        
+    def __repr__(self):
+        return f"Producto(nombre='{self.nombre}', categoria='{self.categoria}', precio={self.precio}, stock={self.stock})"
+
+# 1. Definir la lista de productos
+productos = [
+    Producto("Laptop", "Tecnología", 1200.0, 10),
+    Producto("Mouse", "Tecnología", 25.0, 50),
+    Producto("Teclado", "Tecnología", 45.0, 30),
+    Producto("Monitor", "Tecnología", 300.0, 15),
+    Producto("Audífonos", "Tecnología", 80.0, 25),
+    Producto("Micrófono", "Tecnología", 110.0, 8),
+    Producto("Camisa", "Ropa", 35.0, 40),
+    Producto("Pantalón", "Ropa", 50.0, 20),
+    Producto("Cafetera", "Hogar", 90.0, 12),
+    Producto("Licuadora", "Hogar", 75.0, 18)
+]
+
+# 3.1 Selección (filter)
+resultado_python_filtro = list(filter(lambda p: p.categoria == 'Tecnología' and p.precio > 100, productos))
+
+# 3.2 Transformación (map)
+resultado_python_map = list(map(lambda p: f"{p.nombre}: ${p.precio * 0.9}", productos))
+
+# 3.3 Extremos (maxBy / minBy)
+resultado_python_max = max(productos, key=lambda p: p.precio)
+
+# 3.4 Acumulación (foldLeft / reduce)
+resultado_python_reduce = reduce(lambda acc, p: acc + (p.precio * p.stock), productos, 0.0)
+
+# Imprimir resultados en consola
+print("--- 3.1 FILTRADOS ---")
+for p in resultado_python_filtro:
+    print(p)
+
+print("\n--- 3.2 MAPEADOS ---")
+for item in resultado_python_map:
+    print(item)
+
+print("\n--- 3.3 MÁS CARO ---")
+print(resultado_python_max)
+
+print("\n--- 3.4 VALOR TOTAL DEL INVENTARIO ---")
+print(f"${resultado_python_reduce}")
