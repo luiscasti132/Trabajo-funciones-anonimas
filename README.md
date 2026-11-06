@@ -335,3 +335,5 @@ val resultado = productos
 ### 5.2 Conclusión
 
 Las funciones anónimas son el núcleo conceptual que permite la programación declarativa sobre colecciones, separando el algoritmo de recorrido de la lógica de negocio específica. Tal como se evidenció en casos del mundo real como Apache Spark, el uso de expresiones lambda puras e inmutables facilita la paralelización y optimización de tareas pesadas a escala empresarial sin comprometer la estabilidad del sistema.
+
+IA:https://gemini.google.com/
