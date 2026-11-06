@@ -307,8 +307,8 @@ val resultado = productos
 
 ### 5.1 Tabla comparativa de lenguajes
 
-| Criterio | Scala | Java | Python |
-| --- | --- | --- | --- |
+| Criterio             | Scala | Java | Python |
+| ---                  | --- | --- | --- |
 | **Sintaxis de la lambda**
 
  | `p => p.precio > 10` | `p -> p.precio() > 10` | `lambda p: p.precio > 10` |
